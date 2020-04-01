@@ -1,8 +1,12 @@
 package com.example.basiccalculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button zero,one,two,three,four,five,six,seven,eight,nine,dot,ac,plus,minus,mul,div,equal;
     float mone,mtwo;
     EditText editText;
+    View view;
 
     boolean add,sub,mull,divv;
 
@@ -39,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         ac=findViewById(R.id.ac);
         equal=findViewById(R.id.equal);
         editText=findViewById(R.id.edi);
+        view=findViewById(R.id.rel);
 
 
         one.setOnClickListener(new View.OnClickListener() {
@@ -173,5 +179,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==R.id.back){
+            view.setBackgroundResource(R.drawable.call);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
