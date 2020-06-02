@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/seven"
             android:layout_below="@+id/edi"
-            android:layout_marginTop="100dp"
             android:background="@android:color/transparent"
             android:text="7"/>
     <Button
@@ -46,7 +45,6 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:id="@+id/eight"
-            android:layout_marginTop="100dp"
             android:layout_below="@id/edi"
             android:layout_toRightOf="@+id/seven"
             android:text="8"/>
@@ -79,7 +77,6 @@
             android:layout_height="wrap_content"
             android:text="9"
             android:background="@android:color/transparent"
-            android:layout_marginTop="100dp"
             android:layout_below="@id/edi"
             android:id="@+id/nine"
             android:layout_toRightOf="@+id/eight"/>
@@ -112,7 +109,6 @@
             android:background="@android:color/transparent"
             android:layout_height="wrap_content"
             android:text="*"
-            android:layout_marginTop="100dp"
             android:layout_below="@id/edi"
             android:id="@+id/multi"
             android:layout_toRightOf="@id/nine"/>
